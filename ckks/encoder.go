@@ -110,9 +110,9 @@ func newEncoder(params Parameters) encoder {
 
 	m := int(params.RingQ().NthRoot)
 
-	rotGroup := make([]int, m>>1)
+	rotGroup := make([]int, m>>1) // N
 	fivePows := 1
-	for i := 0; i < m>>2; i++ {
+	for i := 0; i < m>>2; i++ { //N/2
 		rotGroup[i] = fivePows
 		fivePows *= int(GaloisGen)
 		fivePows &= (m - 1)

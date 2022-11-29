@@ -88,7 +88,7 @@ type Ring struct {
 	RescaleParams [][]uint64
 
 	//NTT Parameters
-	NthRoot    uint64
+	NthRoot    uint64   //2N
 	PsiMont    []uint64 //2N-th primitive root in Montgomery form
 	PsiInvMont []uint64 //2N-th inverse primitive root in Montgomery form
 
